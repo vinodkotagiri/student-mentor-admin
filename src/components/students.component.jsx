@@ -1,19 +1,19 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { MdError, MdDeleteForever, MdAssignmentTurnedIn } from 'react-icons/md'
 import { FiEdit2 } from 'react-icons/fi'
 import { Usercontext } from '../App'
 
 const Students = () => {
-    const navigate = useNavigate()
+
     const context = useContext(Usercontext)
     const [students, setStudents] = [context.student, context.setStudent]
 
     const deleteHandler = (id) => {
         let filteredStudents = students.filter((student) => student.id !== id)
         setStudents(filteredStudents)
-        console.log(filteredStudents)
+
     }
 
 
@@ -74,13 +74,13 @@ const Students = () => {
 
                                             </td>
                                             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                {student.mentor ? student.mentor : 'un assigned'}
+                                                {student.mentor.firstName ? student.mentor.firstName : 'un assigned'}
                                             </td>
                                             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                                <button className="bg-blue-500 rounded-xl p-2 m-1"><FiEdit2 size={18} onClick={() => navigate(`/edit-student/${student.id}`)} /></button>
+                                                <Link to={`/edit-student/${index}`}><button className="bg-blue-500 rounded-xl p-2 m-1"><FiEdit2 size={18} /></button></Link>
                                                 <button className="bg-red-500 rounded-xl p-2 m-1"><MdDeleteForever size={18} onClick={() => deleteHandler(student.id)} /></button>
                                                 {
-                                                    student.assigned ? <button className="bg-green-500 rounded-xl p-2 m-1"><MdAssignmentTurnedIn size={18} /></button> : ''
+                                                    !student.assigned ? <Link to={`/assign-student/${index}`}><button className="bg-green-500 rounded-xl p-2 m-1"><MdAssignmentTurnedIn size={18} /></button></Link> : ''
                                                 }
 
                                             </td>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { FcManager } from 'react-icons/fc'
-import { FaUserEdit } from 'react-icons/fa'
+import { MdViewList } from 'react-icons/md'
 import { RiUserAddFill } from 'react-icons/ri'
 import { MdAssignmentInd } from 'react-icons/md'
 import { Link } from 'react-router-dom'
@@ -27,11 +27,11 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to="edit-student">
+                <Link to="students">
                     <div className="flex flex-row items-center justify-start ">
                         <div className="flex flex-row justify-center items-center space-x-2 text-xl font-light text-white ml-6 mt-3 capitalize hover:cursor-pointer">
-                            <FaUserEdit size={22} />
-                            <div>edit student</div>
+                            <MdViewList size={22} />
+                            <div>view students</div>
                         </div>
                     </div>
                 </Link>
@@ -53,11 +53,11 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to="edit-mentor">
+                <Link to="mentors">
                     <div className="flex flex-row items-center justify-start ">
                         <div className="flex flex-row justify-center items-center space-x-2 text-xl font-light text-white ml-6 mt-3 capitalize hover:cursor-pointer">
-                            <FaUserEdit size={22} />
-                            <div>edit mentor</div>
+                            <MdViewList size={22} />
+                            <div>view mentors</div>
                         </div>
                     </div>
                 </Link>
