@@ -76,7 +76,7 @@ const Mentors = () => {
                                                 {
 
 
-                                                    m.assignedStudents ? [].join(",") : 'un assigned'
+                                                    m.assigned ? m.map((mentr) => mentr.assignedStudents) : 'un assigned'
                                                 }
                                             </td>
                                             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">

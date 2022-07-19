@@ -44,7 +44,7 @@ const App = () => {
             email: "johncena@gmail.com",
             mobile: "7788994455",
             assigned: false,
-            assignedStudents: [{},]
+            assignedStudents: []
         },
         {
             id: nanoid(),
@@ -53,7 +53,7 @@ const App = () => {
             email: "salman@gmail.com",
             mobile: "665478981",
             assigned: false,
-            assignedStudents: [{},]
+            assignedStudents: []
         },
         {
             id: nanoid(),
@@ -62,7 +62,7 @@ const App = () => {
             email: "kamal@gmail.com",
             mobile: "7788445594",
             assigned: false,
-            assignedStudents: [{},]
+            assignedStudents: []
         },
 
     ])
